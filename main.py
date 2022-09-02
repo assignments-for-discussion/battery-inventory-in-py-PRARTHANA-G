@@ -1,19 +1,19 @@
 
 def count_batteries_by_usage(cycles):
-  #define variabke for buckets
+  #define variable for buckets
   lowCount = 0
   mediumCount= 0
   highCount = 0
-  
-  for i in cycles[]:
-    if i<400:
+  #divide cycles into the various buckets by incrementing the values when a certain range is matched
+  for i in range(len(cycles)):
+    if cycles[i]<400:
       lowCount = lowCount+1
-    if i>=400 and i<=919:
+    elif cycles[i]>=400 and cycles[i]<=919:
       
       mediumCount = mediumCount+1
-    if i>919:
+    else: 
       highCount = highCount+1
-
+      
   return {
     "lowCount": lowCount,
     "mediumCount": mediumCount,
